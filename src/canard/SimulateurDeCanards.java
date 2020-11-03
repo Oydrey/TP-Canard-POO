@@ -12,11 +12,13 @@ public class SimulateurDeCanards {
 		Cancaneur mandarin = new Mandarin();
 		Cancaneur appelant = new Appelant();
 		Cancaneur canardEnPlastique = new CanardEnPlastique();
-		System.out.println("\nSimulateur de canards");
+		AdaptateurDOie canardOie = new AdaptateurDOie(new Oie());
+		System.out.println("Simulateur de canards\n");
 		simuler(colvert);
 		simuler(mandarin);
 		simuler(appelant);
 		simuler(canardEnPlastique);
+		simuler(canardOie);
 	}
 	
 	void simuler(Cancaneur canard) {
