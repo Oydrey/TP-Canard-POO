@@ -4,12 +4,13 @@ public class SimulateurDeCanards {
 
 	public static void main(String[] args) {
 		SimulateurDeCanards simulateur = new SimulateurDeCanards();
-		simulateur.simuler();
+		FabriqueDeCanardsAbstraite fabriqueDeCanards = new FabriqueDeComptage();
+		simulateur.simuler(fabriqueDeCanards);
 	}
 	
-	void simuler() {
-		Cancaneur colvert = new CompteurDeCouacs(new Colvert());
-		Cancaneur mandarin = new CompteurDeCouacs(new Mandarin());
+	void simuler(FabriqueDeCanardsAbstraite fabriqueDeCanards) {
+		Cancaneur colvert = fabriqueDeCanards.creerColvert();
+		Cancaneur mandarin = fabriqueDeCanards.creerMandarin();
 		Cancaneur appelant = new CompteurDeCouacs(new Appelant());
 		Cancaneur canardEnPlastique = new CompteurDeCouacs(new CanardEnPlastique());
 		Cancaneur canardOie = new CompteurDeCouacs(new AdaptateurDOie(new Oie()));
