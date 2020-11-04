@@ -3,8 +3,8 @@
   associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
   <class id="1" language="java" name="canard.CanardEnPlastique" project="Canard-Correction" 
     file="/Canard-Correction/src/canard/CanardEnPlastique.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="347" y="110"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    <position height="-1" width="-1" x="357" y="169"/>    
+    <display autosize="true" stereotype="false" package="false" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
@@ -12,8 +12,8 @@
   </class>  
   <class id="2" language="java" name="canard.Mandarin" project="Canard-Correction" 
     file="/Canard-Correction/src/canard/Mandarin.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="328" y="236"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    <position height="-1" width="-1" x="340" y="258"/>    
+    <display autosize="true" stereotype="false" package="false" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
@@ -22,7 +22,7 @@
   <interface id="3" language="java" name="canard.Cancaneur" project="Canard-Correction" 
     file="/Canard-Correction/src/canard/Cancaneur.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="151" y="89"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    <display autosize="true" stereotype="true" package="false" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
@@ -30,8 +30,8 @@
   </interface>  
   <class id="4" language="java" name="canard.Colvert" project="Canard-Correction" 
     file="/Canard-Correction/src/canard/Colvert.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="205" y="296"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    <position height="-1" width="-1" x="212" y="323"/>    
+    <display autosize="true" stereotype="false" package="false" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
@@ -39,8 +39,8 @@
   </class>  
   <class id="5" language="java" name="canard.SimulateurDeCanards" project="Canard-Correction" 
     file="/Canard-Correction/src/canard/SimulateurDeCanards.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="530" y="116"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    <position height="-1" width="-1" x="519" y="81"/>    
+    <display autosize="true" stereotype="false" package="false" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
@@ -48,15 +48,15 @@
   </class>  
   <class id="6" language="java" name="canard.Appelant" project="Canard-Correction" 
     file="/Canard-Correction/src/canard/Appelant.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="70" y="235"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    <position height="-1" width="-1" x="65" y="279"/>    
+    <display autosize="true" stereotype="false" package="false" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
   <realization id="7">    
-    <end type="SOURCE" refId="2"/>    
+    <end type="SOURCE" refId="1"/>    
     <end type="TARGET" refId="3"/>  
   </realization>  
   <realization id="8">    
@@ -64,13 +64,17 @@
     <end type="TARGET" refId="3"/>  
   </realization>  
   <realization id="9">    
-    <end type="SOURCE" refId="4"/>    
+    <end type="SOURCE" refId="2"/>    
     <end type="TARGET" refId="3"/>  
   </realization>  
   <realization id="10">    
-    <end type="SOURCE" refId="1"/>    
+    <end type="SOURCE" refId="4"/>    
     <end type="TARGET" refId="3"/>  
   </realization>  
+  <dependency id="11">    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="3"/>  
+  </dependency>  
   <classifier-display autosize="true" stereotype="false" package="false" initial-value="false" signature="true" 
     sort-features="false" accessors="true" visibility="true">    
     <attributes public="true" package="true" protected="true" private="true" static="true"/>    
