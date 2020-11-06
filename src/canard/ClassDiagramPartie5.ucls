@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <class-diagram version="1.2.3" icons="false" always-add-relationships="false" generalizations="true" realizations="true" 
   associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
-  <class id="1" language="java" name="canard.CompteurDeCouacs" project="Canard-Correction" 
-    file="/Canard-Correction/src/canard/CompteurDeCouacs.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="575" y="365"/>    
+  <class id="1" language="java" name="canard.Mandarin" project="Canard-Correction" 
+    file="/Canard-Correction/src/canard/Mandarin.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="438" y="261"/>    
     <display autosize="true" stereotype="false" package="false" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -12,53 +12,66 @@
   </class>  
   <interface id="2" language="java" name="canard.Cancaneur" project="Canard-Correction" 
     file="/Canard-Correction/src/canard/Cancaneur.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="394" y="181"/>    
+    <position height="-1" width="-1" x="494" y="109"/>    
     <display autosize="true" stereotype="true" package="false" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <class id="3" language="java" name="canard.Mandarin" project="Canard-Correction" 
-    file="/Canard-Correction/src/canard/Mandarin.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="246" y="350"/>    
-    <display autosize="true" stereotype="false" package="false" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="4" language="java" name="canard.Colvert" project="Canard-Correction" 
+  <class id="3" language="java" name="canard.Colvert" project="Canard-Correction" 
     file="/Canard-Correction/src/canard/Colvert.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="246" y="371"/>    
+    <position height="-1" width="-1" x="557" y="261"/>    
     <display autosize="true" stereotype="false" package="false" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <association id="5">    
-    <bendpoint x="576" y="181"/>    
-    <end type="SOURCE" refId="1" navigable="false">      
-      <attribute id="6" name="cancaneur">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="7" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
+  <class id="4" language="java" name="canard.Troupe" project="Canard-Correction" 
+    file="/Canard-Correction/src/canard/Troupe.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="265" y="252"/>    
+    <display autosize="true" stereotype="false" package="false" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="5" language="java" name="canard.Appelant" project="Canard-Correction" 
+    file="/Canard-Correction/src/canard/Appelant.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="681" y="258"/>    
+    <display autosize="true" stereotype="false" package="false" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <realization id="6">    
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="2"/>  
+  </realization>  
+  <association id="7">    
+    <end type="SOURCE" refId="4" navigable="false">      
+      <attribute id="8" name="troupeDeCancaneur"/>      
+      <multiplicity id="9" minimum="0" maximum="2147483647"/>    
     </end>    
     <end type="TARGET" refId="2" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <realization id="8">    
-    <end type="SOURCE" refId="1"/>    
+  <realization id="10">    
+    <end type="SOURCE" refId="3"/>    
     <end type="TARGET" refId="2"/>  
   </realization>  
-  <realization id="9">    
+  <realization id="11">    
+    <bendpoint x="265" y="110"/>    
     <end type="SOURCE" refId="4"/>    
     <end type="TARGET" refId="2"/>  
   </realization>  
-  <classifier-display autosize="true" stereotype="false" package="false" initial-value="false" signature="true" 
+  <realization id="12">    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="2"/>  
+  </realization>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
     sort-features="false" accessors="true" visibility="true">    
     <attributes public="true" package="true" protected="true" private="true" static="true"/>    
     <operations public="true" package="true" protected="true" private="true" static="true"/>  
