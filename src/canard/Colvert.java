@@ -21,4 +21,8 @@ public class Colvert implements Cancaneur {
 		observable.notifierObservateurs();
 	}
 	
+	public void accept(Visitor visitor) {
+		visitor.visit(this);
+	}
+	
 }

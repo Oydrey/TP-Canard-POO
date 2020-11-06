@@ -13,14 +13,16 @@ public class Mandarin implements Cancaneur {
 		notifierObservateurs();
 	}
 
-	@Override
 	public void enregistrerObservateur(Observateur observateur) {
 		observable.enregistrerObservateur(observateur);
 	}
 
-	@Override
 	public void notifierObservateurs() {
 		observable.notifierObservateurs();
+	}
+	
+	public void accept(Visitor visitor) {
+		visitor.visit(this);
 	}
 	
 }

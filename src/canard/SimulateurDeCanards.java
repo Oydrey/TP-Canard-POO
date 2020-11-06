@@ -8,7 +8,7 @@ public class SimulateurDeCanards {
 		simulateur.simuler(fabriqueDeCanards);
 	}
 	
-	void simuler(FabriqueDeCanardsAbstraite fabriqueDeCanards) {
+	void simuler(FabriqueDeCanardsAbstraite fabriqueDeCanard) {
 		/*Cancaneur colvert = fabriqueDeCanards.creerColvert();
 		Cancaneur mandarin = fabriqueDeCanards.creerMandarin();
 		Cancaneur appelant = new CompteurDeCouacs(new Appelant());
@@ -36,7 +36,7 @@ public class SimulateurDeCanards {
 		System.out.println("\nSimulateur de canards : Toute la troupe");
 		simuler(troupeDeCanards);
 		System.out.println("\nSimulateur de canards : Troupe de colverts");
-		simuler(troupeDeColverts);*/
+		simuler(troupeDeColverts);
 		
 		FabriqueDeCanardsAbstraite frabriqueDeCanards = new FabriqueDeCanards();
 		Cancaneur colvert = fabriqueDeCanards.creerColvert();
@@ -45,7 +45,32 @@ public class SimulateurDeCanards {
 		
 		colvert.enregistrerObservateur(leCancanologue);
 		
-		simuler(colvert);
+		simuler(colvert);*/
+		
+		FabriqueDeCanardsAbstraite fabriqueDeCanards = new FabriqueDeComptage();
+		Cancaneur colvert = fabriqueDeCanards.creerColvert();
+		Cancaneur mandarin = fabriqueDeCanards.creerMandarin();
+		Cancaneur canardOie = new AdaptateurDOie(new Oie());
+			
+		Troupe sousTroupe = new Troupe();
+		fabriqueDeCanards = new FabriqueDeCanards();
+		sousTroupe.add(fabriqueDeCanards.creerColvert());
+		sousTroupe.add(fabriqueDeCanards.creerMandarin());
+		sousTroupe.add(fabriqueDeCanards.creerColvert());
+			
+		Troupe maTroupe = new Troupe();
+		maTroupe.add(colvert);
+		maTroupe.add(mandarin);
+		maTroupe.add(canardOie);
+		maTroupe.add(sousTroupe);
+					
+		Visitor unVisiteur = new VisitorCompteurNoeudFeuille();
+		maTroupe.accept(unVisiteur);	
+		System.out.println("Nb de noeuds  = "
+				+ ((VisitorCompteurNoeudFeuille) unVisiteur).getNbNoeud());
+		System.out.println("Nb de feuilles  = "
+				+ ((VisitorCompteurNoeudFeuille) unVisiteur).getNbFeuille());
+
 
 	}
 	

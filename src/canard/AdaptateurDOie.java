@@ -21,5 +21,9 @@ public class AdaptateurDOie implements Cancaneur {
 	public void notifierObservateurs() {
 		observable.notifierObservateurs();
 	}
+	
+	public void accept(Visitor visitor) {
+		visitor.visit(this);
+	}
 
 }

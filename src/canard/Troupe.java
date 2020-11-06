@@ -17,21 +17,25 @@ public class Troupe implements Cancaneur {
 		troupeDeCancaneur.add(cancaneur);
 	}
 	
-	@Override
 	public void cancaner() {
 		for (Cancaneur cancaneur : troupeDeCancaneur) {
 			cancaneur.cancaner();
 		}
 	}
 
-	@Override
 	public void enregistrerObservateur(Observateur observateur) {
 		observable.enregistrerObservateur(observateur);
 	}
 
-	@Override
 	public void notifierObservateurs() {
 		observable.notifierObservateurs();
+	}
+
+	public void accept(Visitor visitor) {
+		visitor.visit(this);
+		for (Cancaneur cancaneur : troupeDeCancaneur) {
+			cancaneur.accept(visitor);
+		}
 	}
 
 }
